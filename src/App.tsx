@@ -5,7 +5,6 @@ import './App.css';
 function App() {
   const [session, setSession] = useState()
 
-
   useEffect( () => {
     fetch("http://localhost:8080/raas/session", {
       method: "POST",
@@ -27,6 +26,7 @@ function App() {
       <header className="App-header">
         {session ? <ReportLayoutGallery
             session={session}
+            height={900}
         /> : 'loading....'}
       </header>
     </div>
